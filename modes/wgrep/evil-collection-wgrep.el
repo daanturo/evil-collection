@@ -37,6 +37,10 @@
 ;;;###autoload
 (defun evil-collection-wgrep-setup ()
   "Set up `evil' bindings for `wgrep'."
+
+  (evil-collection-define-key 'normal 'grep-mode-map
+    "i" 'wgrep-change-to-wgrep-mode)
+
   (evil-collection-define-key nil 'wgrep-mode-map
     [remap evil-write] 'wgrep-finish-edit)
 
